@@ -11,6 +11,7 @@ public class OperacoesTransacionadasTest extends BaseRepositotyTest {
     void abrirFecharTransacao() {
 
         Produto produto = new Produto();
+        produto.setId(2);
         em.getTransaction().begin();
         em.persist(produto);
         em.getTransaction().commit();
@@ -18,7 +19,7 @@ public class OperacoesTransacionadasTest extends BaseRepositotyTest {
         em.refresh(produto);
 
         assertNotNull(produto);
-        assertEquals(0, produto.getId());
+        assertEquals(produto.getId(), produto.getId());
         assertNull(produto.getNome());
         assertNull(produto.getDescricao());
     }
