@@ -4,21 +4,19 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.math.BigDecimal;
-
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-@Table(name = "item_pedido")
-public class ItemPedido {
+@Table(name = "pagamento_boleto")
+public class PagamentoBoleto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private long id;
     @Column(name = "pedido_id")
     private long pedidoId;
-    @Column(name = "produto_id")
-    private long produtoId;
-    private int quantidade;
-    @Column(name = "preco_produto")
-    private BigDecimal precoProduto;
+    @Column(name = "status_pagamento")
+    private StatusPagamento statusPagamento;
+    @Column(name = "codigo_barras")
+    private String codigoBarras;
 }
