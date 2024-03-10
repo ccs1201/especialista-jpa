@@ -25,4 +25,6 @@ public class Pedido {
     @Enumerated(EnumType.STRING)
     private StatusPedido statusPedido;
     private BigDecimal total;
+    @Embedded
+    private Endereco enderecoEntrega;
 }
