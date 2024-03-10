@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class OperacoesTransacionadasTest extends BaseRepositotyTest {
+public class OperacoesTransacionadasTest extends BaseRepositoryTest {
 
     @Test
     void abrirFecharTransacao() {
@@ -47,7 +47,7 @@ public class OperacoesTransacionadasTest extends BaseRepositotyTest {
         p.setPreco(BigDecimal.valueOf(10.00).setScale(2));
 
         begin();
-        em.merge(p);
+        p = em.merge(p);
         commit();
 
         em.clear();

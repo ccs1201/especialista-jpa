@@ -4,7 +4,7 @@ import br.com.ccs.ejpa.entities.Produto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ProdutoTest extends BaseRepositotyTest {
+public class ProdutoTest extends BaseRepositoryTest {
 
     @Test
     void findById() {

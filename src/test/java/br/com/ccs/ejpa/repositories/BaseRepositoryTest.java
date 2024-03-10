@@ -8,7 +8,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-class BaseRepositotyTest {
+class BaseRepositoryTest {
 
     protected static EntityManagerFactory entityManagerFactory;
     protected static EntityManager em;
