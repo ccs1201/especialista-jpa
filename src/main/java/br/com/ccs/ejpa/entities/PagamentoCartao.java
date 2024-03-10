@@ -16,6 +16,7 @@ public class PagamentoCartao {
     @Column(name = "pedido_id")
     private long pedidoId;
     @Column(name = "status_pagamento")
+    @Enumerated(EnumType.STRING)
     private StatusPagamento statusPagamento;
     @Column(name = "numero_cartao")
     private String numeroCartao;

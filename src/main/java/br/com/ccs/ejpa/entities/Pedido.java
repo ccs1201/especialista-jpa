@@ -22,6 +22,7 @@ public class Pedido {
     @Column(name = "nota_fiscal_id")
     private long NotaFiscalId;
     @Column(name = "status_pedido_id")
+    @Enumerated(EnumType.STRING)
     private StatusPedido statusPedido;
     private BigDecimal total;
 }
