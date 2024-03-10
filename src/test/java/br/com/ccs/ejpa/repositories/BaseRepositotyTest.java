@@ -32,4 +32,12 @@ class BaseRepositotyTest {
     void afterEach() {
         em.close();
     }
+
+    protected void begin() {
+        em.getTransaction().begin();
+    }
+
+    protected void commit() {
+        em.getTransaction().commit();
+    }
 }

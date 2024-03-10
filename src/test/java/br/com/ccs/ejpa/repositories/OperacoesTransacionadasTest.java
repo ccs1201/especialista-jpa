@@ -19,8 +19,20 @@ public class OperacoesTransacionadasTest extends BaseRepositotyTest {
         em.refresh(produto);
 
         assertNotNull(produto);
-        assertEquals(produto.getId(), produto.getId());
+        assertEquals(2, produto.getId());
         assertNull(produto.getNome());
         assertNull(produto.getDescricao());
+    }
+
+    @Test
+    void removerObjeto() {
+        var p = em.find(Produto.class, 3);
+        begin();
+        em.remove(p);
+        commit();
+
+        p = em.find(Produto.class, p.getId());
+
+        assertNull(p);
     }
 }
