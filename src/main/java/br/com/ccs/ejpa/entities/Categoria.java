@@ -5,13 +5,13 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@Entity
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
-public class Cliente {
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+public class Categoria {
     @Id
+    @EqualsAndHashCode.Include
     private long id;
     private String nome;
-    private SexoCliente sexo;
-
+    private long categoriaPai;
 }
